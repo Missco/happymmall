@@ -2,7 +2,7 @@
 * @Author: Ye
 * @Date:   2017-09-11 15:17:17
 * @Last Modified by:   Ye
-* @Last Modified time: 2017-09-12 17:40:03
+* @Last Modified time: 2017-09-12 18:11:25
 */
 'use strict';
 var conf = {
@@ -45,7 +45,7 @@ var _mm = {
     //获取url参数
     getUrlParam : function(name){
         //happymmall.com/product/list?keyword=xxx&page=1
-        //设置正则表达式规则，提取keyword部分
+        //设置正则表达式规则，提取keyword部分或者page部分
         var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         //？之后的参数匹配reg，匹配成功为数组，否则为none
         var result  = window.location.search.substr(1).match(reg);
