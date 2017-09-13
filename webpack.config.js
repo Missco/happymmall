@@ -2,7 +2,7 @@
 * @Author: Ye
 * @Date:   2017-09-06 10:03:59
 * @Last Modified by:   Ye
-* @Last Modified time: 2017-09-12 17:47:14
+* @Last Modified time: 2017-09-13 15:06:31
 */
 'use strict';
 
@@ -49,10 +49,12 @@ var config = {
     }, 
     resolve :  {
         alias : {
-            util    : __dirname + '/src/util',
-            page    : __dirname + '/src/page',
-            service : __dirname + '/src/service',
-            image   : __dirname + '/src/image'
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
+  
         }
     },
     plugins : [

@@ -2,15 +2,16 @@
 * @Author: Ye
 * @Date:   2017-09-11 15:17:17
 * @Last Modified by:   Ye
-* @Last Modified time: 2017-09-12 17:40:03
+* @Last Modified time: 2017-09-13 10:39:24
 */
 'use strict';
-var conf = {
+var Hogan = require('hogan.js');
+var conf  = {
     //此时接口地址与静态文件地址相同，可以直接设置为空
     serverHost : ''
 };
 //定义一个工具类mm为一个对象
-var _mm = {
+var _mm   = {
     //请求后端数据
     request : function(param){
         var _this=this;//在request中无法获取_mm对象，增加this
@@ -51,11 +52,44 @@ var _mm = {
         var result  = window.location.search.substr(1).match(reg);
         return result ? decodeURIComponent(result[2]) : null;
     },
+    //渲染html模板
+    renderHtml : function(htmlTemplate, data){
+        var template = Hogan.compile(htmlTemplate),// 编译
+            result   = template.render(data);//渲染
+        return result;
+    },
+    //成功提示
+    successTips : function(msg){
+        alert(msg || '操作成功！')
+    },
+    //错误提示
+    errorTips : function(msg){
+        alert(msg || '哪里不对了~')
+    },
+    //字段的验证，支持非空、手机、邮箱的判断
+    validate : function(value,type){
+        var value = $.trim(value);//去掉空格，也可将value的值变成字符串
+        //非空验证
+        if('require' === type){
+            return !!value;
+        }
+        //手机号验证
+        if('phone' ===  type){
+            return /^1\d{10}$/.test(value);
+        }
+        //邮箱验证
+        if('email' === type){
+            return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
+        }
+    },
     //统一登录处理
     doLogin : function(){
         //登录跳转回原来的页面，页面url可能包含特殊字符，导致url截断，因此需要encodeURIComponent转码
         window.location.href = './login.html?redirect=' + encodeURIComponent(window.locaton.href);
 
+    },
+    goHome : function(){
+        window.location.href = './index.html';
     }
 };
 

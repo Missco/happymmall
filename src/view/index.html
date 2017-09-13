@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<%= require('html-loader!./layout/html-head.html') %>
-<body>
-   
-    <p>hello index</p>
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <head>
+        <%= require('html-loader!./layout/html-common.html') %>
+        <title>happymmall电商平台</title>
+    </head>
 
-</body>
+    <body>
+        <!-- <%= require('html-loader!./layout/nav-simple.html') %> -->
+        <%= require('html-loader!./layout/nav.html') %>
+        <div>
+            <i class="fa fa-user"></i>
+        </div>
+        
+       
+        
+         <%= require('html-loader!./layout/footer.html') %>
+    </body>
 </html>

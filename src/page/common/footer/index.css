@@ -1,0 +1,22 @@
+/*
+* @Author: Ye
+* @Date:   2017-09-13 16:46:01
+* @Last Modified by:   Ye
+* @Last Modified time: 2017-09-13 17:37:57
+*/
+.footer{
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+   padding-right: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
