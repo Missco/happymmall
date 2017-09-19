@@ -2,7 +2,7 @@
 * @Author: Ye
 * @Date:   2017-09-13 16:46:01
 * @Last Modified by:   Ye
-* @Last Modified time: 2017-09-13 17:37:57
+* @Last Modified time: 2017-09-17 14:50:31
 */
 .footer{
     padding-bottom: 10px;
@@ -13,7 +13,7 @@
     line-height: 30px;
 }
 .footer .links .link{
-   padding-right: 0 10px;
+   padding: 0 10px;
 }
 .footer .copyright{
     text-align: center;
