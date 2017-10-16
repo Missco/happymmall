@@ -2,7 +2,7 @@
 * @Author: Ye
 * @Date:   2017-09-11 15:17:17
 * @Last Modified by:   Ye
-* @Last Modified time: 2017-09-13 10:39:24
+* @Last Modified time: 2017-09-28 11:50:17
 */
 'use strict';
 var Hogan = require('hogan.js');
@@ -71,7 +71,7 @@ var _mm   = {
         var value = $.trim(value);//去掉空格，也可将value的值变成字符串
         //非空验证
         if('require' === type){
-            return !!value;
+            return !!value;//!!将一个值快速转化为布尔值，效率高，同ToBoolean(ToBoolean(value))
         }
         //手机号验证
         if('phone' ===  type){
@@ -85,7 +85,7 @@ var _mm   = {
     //统一登录处理
     doLogin : function(){
         //登录跳转回原来的页面，页面url可能包含特殊字符，导致url截断，因此需要encodeURIComponent转码
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.locaton.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 
     },
     goHome : function(){

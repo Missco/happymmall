@@ -2,7 +2,7 @@
 * @Author: Ye
 * @Date:   2017-09-17 15:56:02
 * @Last Modified by:   Ye
-* @Last Modified time: 2017-09-17 16:03:32
+* @Last Modified time: 2017-09-28 10:20:19
 */
 
 'use strict';
@@ -45,12 +45,12 @@ var _user = {
     },
     // 检查登录状态
     checkLogin : function(resolve, reject){
-        // _mm.request({
-        //     url     : _mm.getServerUrl('/user/get_user_info.do'),
-        //     method  : 'POST',
-        //     success : resolve,
-        //     error   : reject
-        // });
+        _mm.request({
+            url     : _mm.getServerUrl('/user/get_user_info.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
     },
     // 获取用户密码提示问题
     getQuestion : function(username, resolve, reject){

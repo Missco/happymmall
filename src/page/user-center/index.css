@@ -1,0 +1,17 @@
+/*
+* @Author: Ye
+* @Date:   2017-09-28 10:35:45
+* @Last Modified by:   Ye
+* @Last Modified time: 2017-09-28 12:40:01
+*/
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .lable{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+
+}
